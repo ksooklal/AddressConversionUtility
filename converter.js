@@ -1,3 +1,6 @@
+/* This file contains a class called GeographicLocation, which is used to store the latitude and longitude 
+returned by the getAddressConversion() method, which takes in the street address as a string. */
+
 function GeographicLocation(){
 	this.latitude = "";
 	this.longitude = "";
@@ -12,7 +15,6 @@ function getAddressConversion(addressString){
 	var address = replaceAll(' ', '+', addressString);
 	var apiKey = "AIzaSyAQeBBy5gncPrgeyZCJdTx6zmo2n6t3faA";
 	var url = "https://maps.googleapis.com/maps/api/geocode/xml?address=" + address + "&key=" + apiKey;
-	console.log(url);
 	var eke = new GeographicLocation();
 	$.ajax({
 		dataType: "xml",
